@@ -30,7 +30,7 @@ void setup() {
   // Loop until there is something to say
   while (TextToSay == "") {
     // Drop Zone URL
-    URL = "http://spacelandclocks.herokuapp.com/socket.io/?EIO=3&transport=polling&sid=";
+    URL = "http://houstonclock.skydivespaceland.com/socket.io/?EIO=3&transport=polling&sid=";
     // GET SID
     if (http.begin(client, URL) && http.GET() == 200) {
       if (!deserializeJson(JDoc, http.getString().substring(http.getString().indexOf("{")))) {
